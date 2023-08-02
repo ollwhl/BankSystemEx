@@ -1,0 +1,193 @@
+<!-- 316541 ワンフリン-->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>Test Report</title>
+    <meta charset="utf-8">
+    <style>
+        h1 {
+            text-align: center;
+            color: dimgrey
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        td,
+        th {
+            font-size: 1em;
+            border: 1px solid #0681d0;
+            padding: 3px 7px 2px 7px;
+        }
+        
+        th {
+            font-size: 1.1em;
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: #0681d0;
+            color: #ffffff;
+        }
+        
+        tr.alt td {
+            color: #000000;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>テスト手順書</h1>
+    <table>
+        <tr>
+            <th>確認するservlet</th>
+            <th>手順</th>
+            <th>予想される結果</th>
+            <th>確認日</th>
+        </tr>
+        <tr>
+            <td rowspan="11"><a href="https://java.cse.ce.nihon-u.ac.jp/java2021f/u316541/index.html">index</a></td>
+            <td>index.htmlを開く</td>
+            <td>メニュー画面が表示される．</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>口座開設ボタンをクリックする</td>
+            <td>口座開設の画面が開く</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>メニューに戻るのボタンをクリックする</td>
+            <td>メニューに戻る</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>口座解約ボタンをクリックする</td>
+            <td>口座解約の画面が開く</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>メニューに戻るのボタンをクリックする</td>
+            <td>メニューに戻る</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>預金ボタンをクリックする</td>
+            <td>預金の画面が開く</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>メニューに戻るのボタンをクリックする</td>
+            <td>メニューに戻る</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>引き出しボタンをクリックする</td>
+            <td>引き出しの画面が開く</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>メニューに戻るのボタンをクリックする</td>
+            <td>メニューに戻る</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>残高照会ボタンをクリックする</td>
+            <td>残高照会の画面が開く</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>メニューに戻るのボタンをクリックする</td>
+            <td>メニューに戻る</td>
+            <td>2022/01/19</td>
+        </tr>
+
+        <tr class="alt">
+            <td rowspan="2"><a href="https://java.cse.ce.nihon-u.ac.jp/java2021f/u316541/open">open</a></td>
+            <td>開設する口座名「太郎」を入力して，口座開設ボタンをクリックする．</td>
+            <td>「太郎の口座の開設に成功しました。(100)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>口座開設の画面でもう一度「太郎」の口座を開設する</td>
+            <td>「太郎の口座は既に存在します。(107)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td rowspan="4"><a href="https://java.cse.ce.nihon-u.ac.jp/java2021f/u316541/deposit">deposit</a></td>
+            <td>太郎の口座へ1000円を預金する</td>
+            <td>「太郎の口座へ1000円の預金に成功し残高は1000円になりました。(300)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>二郎の口座へ1000円を預金する</td>
+            <td>「二郎の口座は存在しません。(307)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>太郎の口座へ1000.5円を預金する</td>
+            <td>「0以上の整数を入力してください(304)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>太郎の口座へ-1000円を預金する</td>
+            <td>「0以上の整数を入力してください(303)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+
+        <tr class="alt">
+            <td rowspan="5"><a href="https://java.cse.ce.nihon-u.ac.jp/java2021f/u316541/withdraw">withdraw</a></td>
+            <td>太郎の口座から500円を引き出す</td>
+            <td>「太郎の口座へ500円の出金に成功し残高は500円になりました。(400)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>太郎の口座から1000円を引き出す</td>
+            <td>「出金金額は残高に超えています(401)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>太郎の口座から-1000円を引き出す</td>
+            <td>「0以上の整数を入力してください(403)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td>太郎の口座から1000.5円を引き出す</td>
+            <td>「0以上の整数を入力してください(404)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>二郎の口座から1000円を引き出す</td>
+            <td>「二郎の口座は存在しません。(407)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2"><a href="https://java.cse.ce.nihon-u.ac.jp/java2021f/u316541/balance">showBalance</a></td>
+            <td>太郎の口座の残高を照会する</td>
+            <td>「太郎の口座の残高は500円(500)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>太郎の口座の残高を照会する</td>
+            <td>「二郎の口座は存在しません。(507)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr>
+            <td rowspan="2"><a href="https://java.cse.ce.nihon-u.ac.jp/java2021f/u316541/close">close</a></td>
+            <td>太郎の口座を解約する</td>
+            <td>「太郎の口座の解約に成功しました。(200)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+        <tr class="alt">
+            <td>太郎の口座をもう一度解約する</td>
+            <td>「太郎の口座は存在しません。(207)」が表示される</td>
+            <td>2022/01/19</td>
+        </tr>
+    </table>
+</body>
+
+</html>
